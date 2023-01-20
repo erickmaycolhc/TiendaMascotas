@@ -2,7 +2,7 @@ import Link from "next/link";
 type Props = {
   children: React.ReactNode;
 };
-export default function TaskLayout({ children }: Props) {
+export default function MenuRealPlazaLayout({ children }: Props) {
   return (
     <>
       <div className="papa">

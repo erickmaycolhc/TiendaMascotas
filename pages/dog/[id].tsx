@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import TaskLayout from "../../components/layout/TaskLayouts";
 import Link from "next/link";
 import axios from 'axios';
 import { functions } from "../../utils";
+import MenuRealPlazaLayout from '../../components/layout/MenuRealPlazaLayout';
+import { LineDescription } from '../../components/ui/line-description/LineDescription';
 
 interface IMascota {
   "name": string;
@@ -90,8 +91,7 @@ export default function DetailsDog() {
 
   return (
     <>
-    <TaskLayout>
-    
+    <MenuRealPlazaLayout>
       <div className="wrapper">
         <div className="wrapper-center">
           <section className="product">
@@ -207,60 +207,90 @@ export default function DetailsDog() {
                 <h2>Características</h2>
               </div>
             </div>
-            <div className="peso">
-              <div className="color-peso">
-                <h2>Peso</h2>
-              </div>
-              <div className="color-peso-2">
-              {mascota?.detalles?.peso}
-              </div>
-            </div>
-            <div className="estatura-promedio">
-              <div className="estatura-promedio-1">
-                <h2>Estatura promedio</h2>
-              </div>
-              <div className="estatura-promedio-2">
-              {mascota?.detalles?.estatura_promedio}
-              </div>
-            </div>
-            <div className="vida">
-              <div className="vida-1">
-                <h2>Vida</h2>
-              </div>
-              <div className="vida-2">
-              {mascota?.detalles?.vida}
-              </div>
-            </div>
-            <div className="actividad-fisica">
-              <div className="actividad-fisica-1">
-                <h2>Actividad Fisica</h2>
-              </div>
-              <div className="actividad-fisica-2">
-              {mascota?.detalles?.actividad_fisica}
-              </div>
-            </div>
+            <LineDescription 
+              name={"Peso"}
+              value={mascota?.detalles?.peso}
+              classColor={"color-peso-2"}>
+            </LineDescription>
+            <LineDescription 
+              name={"Estatura promedio"}
+              value=  {mascota?.detalles?.estatura_promedio}
+              classColor={"Estatura-promedio-2"}>
+            </LineDescription>
+            <LineDescription 
+              name={"Vida"}
+              value= {mascota?.detalles?.vida}
+              classColor={"estatura-promedio-2"}>
+            </LineDescription>
+            <LineDescription 
+              name={"Actividad Fisica"}
+              value={mascota?.detalles?.actividad_fisica}
+              classColor={"estatura-promedio-2"}>
+            </LineDescription>
+            <LineDescription 
+              name={"Clima Recomendado"}
+              value={mascota?.detalles?.clima_recomendado}
+              classColor={"estatura-promedio-2"}>
+            </LineDescription>
+            <LineDescription 
+              name={"Caracter"}
+              value=  {mascota?.detalles?.caracter}
+              classColor={"estatura-promedio-2"}>
+            </LineDescription>
+                                                      {/* <div className="peso">
+                                                        <div className="color-peso">
+                                                          <h2>Peso</h2>
+                                                        </div>
+                                                        <div className="color-peso-2">
+                                                        {mascota?.detalles?.peso}
+                                                        </div>  
+                                                      </div>
+                                                      <div className="estatura-promedio">
+                                                        <div className="estatura-promedio-1">
+                                                          <h2>Estatura promedio</h2>
+                                                        </div>
+                                                        <div className="estatura-promedio-2">
+                                                        {mascota?.detalles?.estatura_promedio}
+                                                        </div>
+                                                      </div>
+                                                      <div className="vida">
+                                                        <div className="vida-1">
+                                                          <h2>Vida</h2>
+                                                        </div>
+                                                        <div className="vida-2">
+                                                        {mascota?.detalles?.vida}
+                                                        </div>
+                                                      </div>
+                                                      <div className="actividad-fisica">
+                                                        <div className="actividad-fisica-1">
+                                                          <h2>Actividad Fisica</h2>
+                                                        </div>
+                                                        <div className="actividad-fisica-2">
+                                                        {mascota?.detalles?.actividad_fisica}
+                                                        </div>
+                                                      </div>
 
-            <div className="clima-recomendado">
-              <div className="actividad-fisica-1">
-                <h2>Clima Recomendado</h2>
-              </div>
-              <div className="clima-2">
-              {mascota?.detalles?.clima_recomendado}
-              </div>
-            </div>
+                                                      <div className="clima-recomendado">
+                                                        <div className="actividad-fisica-1">
+                                                          <h2>Clima Recomendado</h2>
+                                                        </div>
+                                                        <div className="clima-2">
+                                                        {mascota?.detalles?.clima_recomendado}
+                                                        </div>
+                                                      </div>
 
-            <div className="caracter">
-              <div className="actividad-fisica-1">
-                <h2>Caracter</h2>
-              </div>
-              <div className="caracter-2">
-              {mascota?.detalles?.caracter}
-              </div>
-            </div>
+                                                      <div className="caracter">
+                                                        <div className="actividad-fisica-1">
+                                                          <h2>Caracter</h2>
+                                                        </div>
+                                                        <div className="caracter-2">
+                                                        {mascota?.detalles?.caracter}
+                                                        </div>
+                                                      </div> */}
           </section>
         </div>
       </div>
-    </TaskLayout>
+    </MenuRealPlazaLayout>
     </>
   );
   
