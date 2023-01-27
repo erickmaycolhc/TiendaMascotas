@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Rajdhani:wght@500;600;700&display=swap");
+@font-face {
+  font-family: myFirstFont;
+  src: url(../public/fonts/themify/fonts/themify.ttf);
+}
+
 body,
 html {
   padding: 0%;
@@ -180,11 +187,10 @@ p {
 }
 .dino-1 {
   width: 154px;
-    margin-top: 19px;
+  margin-top: 19px;
 }
 
 .text-dino h1 {
- 
   padding: 10px 0px;
   margin-right: 193px;
 }
@@ -600,7 +606,6 @@ con-descuent {
   align-items: center;
 
   position: relative;
-  
 
   display: flex;
   width: 100%;
@@ -612,14 +617,14 @@ con-descuent {
   color: #85858d;
   font-family: Arial, Helvetica, sans-serif;
 }
-.vida-2{
+.vida-2 {
   margin-left: 22px;
 }
 .vida {
   display: flex;
   justify-content: flex-start;
 }
-.actividad-fisica-2{
+.actividad-fisica-2 {
   margin-left: 1px;
 }
 .actividad-fisica {
@@ -661,7 +666,7 @@ con-descuent {
 
   width: 100%;
 }
-.clima-2{
+.clima-2 {
   margin-left: 25px;
   margin-top: 13px;
   font-weight: 600;
@@ -700,4 +705,367 @@ con-descuent {
 .caracter {
   display: flex;
   justify-content: flex-start;
+}
+.bg-gris {
+  background-color: #f4f5f7;
+}
+
+.caja-user {
+  justify-content: center;
+  display: flex;
+  height: 100vh;
+}
+.encapsulado-login {
+  background: #ffffff;
+  align-self: center;
+
+  box-shadow: 0 0 0px rgb(219 220 219);
+  width: 613px;
+}
+
+.datos-login {
+  /* display: flex; */
+
+  flex-direction: column;
+  /* margin-left: 51px;
+  margin-right: 51px; */
+  padding: 48px 48px;
+}
+
+.campo-1 {
+  font-size: 15px;
+  /* margin-top: 45px; */
+  font-family: system-ui;
+  display: contents;
+  /* margin-top: 34px; */
+}
+
+span {
+  color: #2341c6;
+}
+.campo-2 {
+  margin-top: 78px;
+}
+.campo-2 input {
+  width: 444px;
+  padding: 16px 31px;
+}
+
+.campo-3 {
+  margin-top: 23px;
+}
+
+.campo-3 input {
+  width: 444px;
+  padding: 16px 31px;
+}
+
+.campo-4 {
+  margin-top: 27px;
+}
+
+.campo-4 button {
+  padding: 18px 45px;
+  background: #1f3bb3;
+  color: white;
+  border-radius: 5px;
+}
+
+input {
+  font-size: 0.9375rem;
+  border: 1px solid #dee2e6;
+}
+
+.campo-2 ::placeholder {
+  color: #adb5bd;
+  font-size: 15px;
+}
+
+.campo-3 ::placeholder {
+  color: #adb5bd;
+  font-size: 15px;
+}
+
+/*HOME*/
+main {
+  display: flex;
+}
+.admin-menu {
+  background-color: #ffffff;
+  width: 270px;
+  height: 100vh;
+}
+.wrapper-logo {
+  height: 130px;
+  text-align: center;
+}
+.wrapper-logo img {
+  width: 150px;
+  padding-top: 63px;
+}
+.wrapper-user {
+  background-color: #eff1f7;
+  width: calc(100% - 270px);
+}
+.wrapper-menu {
+  /* background-color: red; */
+  padding-top: 55px;
+}
+.wrapper-menu ul,
+.wrapper-menu ul li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.wrapper-menu ul li.menu-title span {
+  color: #2daab8;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Rajdhani", sans-serif;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.wrapper-menu ul li span {
+  padding-left: 30px;
+}
+
+.wrapper-menu ul li a {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  color: #676b84;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  font-family: poppins, sans-serif;
+  align-items: center;
+  margin-top: 1px;
+}
+
+.wrapper-menu ul li a::after {
+  position: absolute;
+  right: 36px;
+  height: 24px;
+  width: 24px;
+  content: "";
+  background: url(http://localhost:3001/img/arrow-right-capture.png);
+}
+.wrapper-menu ul li a img {
+  width: 19px;
+  padding-right: 22px;
+  display: block;
+}
+
+.logo-user {
+  position: relative;
+  height: 130px;
+  background-color: #ffffff;
+}
+
+.logo-user img {
+  position: absolute;
+  display: flex;
+  margin-left: 1544px;
+  margin-top: 22px;
+  height: 86px;
+  width: 89px;
+}
+
+.aside-tabla {
+  /* height: calc(100%-133px); */
+  background-color: #eff1f7;
+}
+
+/* asfasdfdsjkasdfgjkbwrfkbjlwfbhjkawrfbjksefbujkbjlefbjklsfhujiksdfhjiklsdf
+*/
+
+.customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.customers td,
+.customers th {
+  border-bottom: 1px solid #ddd;
+  padding: 23px 0;
+}
+
+/* .customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+} */
+
+/* .customers tr:hover {
+  background-color: #ddd;
+} */
+.customers th {
+  padding-top: 21px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #31acb9;
+  color: white;
+  padding-left: 25px;
+}
+.customers th:nth-child(1) {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+.customers th:nth-child(8) {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.customers tr td {
+  color: #828bb2;
+  padding-left: 25px;
+}
+.customers tr td span {
+  color: black;
+}
+
+.buscador-and-tabla {
+  height: 103px;
+  width: 0;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.Mas {
+  padding: 22px 30px;
+}
+
+.Mas h3 {
+  font-family: rajdhani, sans-serif;
+  font-weight: 600;
+  color: #222;
+}
+
+.butt {
+  background-color: #31acb9;
+  /* display: block; */
+  width: 106px;
+  padding: 10px 0px;
+  border-radius: 5px;
+  text-align: center;
+
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+.butt a {
+  text-decoration: none;
+  color: white;
+}
+
+.butt:hover {
+  background-color: white;
+  border: 1px solid black;
+}
+.butt:hover {
+  color: #31acb9;
+}
+
+.busc {
+  margin-left: 944px;
+  position: relative;
+}
+
+.cajita-add {
+  margin-top: 39px;
+  margin-left: 8px;
+  margin-top: 39px;
+
+  font-weight: 500;
+  font-size: 13px;
+  font-family: poppins, sans-serif;
+}
+.cajita-add a {
+  text-decoration: none;
+  color: white;
+}
+.busc input {
+  /* padding: 0px 12px; */
+  width: 320px;
+  height: 38px;
+  border-radius: 5px;
+  /* background-color: yellow; */
+  border: none;
+  border: 1px solid #2daab8;
+  font-size: 13px;
+  margin-top: 39px;
+  /* font-weight: 600; */
+  padding: 0px 54px;
+}
+
+.busc-img {
+  margin-top: 50px;
+  position: absolute;
+  margin-left: 19px;
+}
+
+.busc-img::before {
+  position: absolute;
+  width: 1px;
+  height: 60%;
+  content: "";
+  background-color: #31acb9;
+  top: -3px;
+  left: 22px;
+}
+.busc-img svg path {
+  position: absolute;
+  fill: #31acb9;
+}
+
+.cuerpo-table {
+  width: 1582px;
+  margin-left: 30px;
+  box-shadow: 0 0 4px rgb(219 220 219);
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding-top: 18px;
+}
+
+.captulado-logo {
+  background-color: red;
+}
+
+.cuerpo-new-mascota {
+  margin-left: 175px;
+  max-width: 1300px;
+  box-shadow: 0 0 4px rgb(219 220 219);
+  background-color: white;
+  margin-top: 73px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.titulo {
+  padding: 26px 47px;
+}
+
+.cuerpo-nombre-stock {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.input-imagen {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cuerpo-precio-descont-stock {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.cuerpo-peso-estatura-vida {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.cuerpo-actividad-clima-caracter {
+  justify-content: space-evenly;
+  display: flex;
 }
