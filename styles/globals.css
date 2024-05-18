@@ -912,7 +912,7 @@ main {
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
 }
-.customers th:nth-child(8) {
+.customers th:nth-child(9) {
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
 }
@@ -1042,30 +1042,68 @@ main {
 }
 
 .titulo {
-  padding: 26px 47px;
+  /* padding: 26px 47px; */
+  padding: 26px 122px;
+  background-color: #31acb9;
+  color: white;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .cuerpo-nombre-stock {
-  justify-content: space-evenly;
+  justify-content: space-around;
   display: flex;
+  margin-top: 20px;
+  padding-right: 24px;
 }
 
 .input-imagen {
+  justify-content: space-around;
   display: flex;
-  justify-content: space-evenly;
 }
 
 .cuerpo-precio-descont-stock {
-  justify-content: space-evenly;
+  justify-content: space-around;
   display: flex;
+  margin-top: 20px;
 }
 
 .cuerpo-peso-estatura-vida {
-  justify-content: space-evenly;
+  justify-content: space-around;
   display: flex;
+  margin-top: 20px;
 }
 
 .cuerpo-actividad-clima-caracter {
-  justify-content: space-evenly;
+  justify-content: space-around;
   display: flex;
+  margin-top: 20px;
+}
+
+.enviarr {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button-enviar {
+  margin-top: 20px;
+  padding: 18px 45px;
+  background: #1f3bb3;
+  color: white;
+  border-radius: 5px;
+}
+
+input {
+  border: 1px solid #2daab8;
+}
+
+textarea {
+  border: 1px solid #2daab8;
+}
+.active {
+  padding: 2px 6px;
+  background: #1ccc74;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
 }

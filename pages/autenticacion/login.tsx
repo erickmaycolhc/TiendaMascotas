@@ -10,24 +10,23 @@ const Login = () => {
           <div className="encapsulado-login">
             <div className="datos-login">
               <div className="campo-1">
-              <h3>Star<span>Admin</span></h3>
+                <h3>
+                  Star<span>Admin</span>
+                </h3>
               </div>
 
               <div className="campo-2">
-              <input type="text" placeholder="Username"/>
-
+                <input type="text" placeholder="Username" />
               </div>
 
               <div className="campo-3">
-             <input type="text" placeholder="Username"/>
+                <input type="text" placeholder="Username" />
               </div>
 
               <div className="campo-4">
-              <Link href={"/admin/mascota"}>
-                <button  type="button">
-                  SIGN IN
-                </button>
-              </Link>
+                <Link href={"/admin/mascota"}>
+                  <button type="button">SIGN IN</button>
+                </Link>
               </div>
             </div>
           </div>

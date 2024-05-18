@@ -1,8 +1,12 @@
 import AdminLayout from "../../../components/layout/AdminLayout";
-export default function Actualizar() {
+import { useRouter } from "next/router";
+import { useState } from "react";
+import New from "./new";
+
+export default function Mostrar() {
   return (
     <>
-      <AdminLayout>dfasdasasd</AdminLayout>
+      <New></New>
     </>
   );
 }

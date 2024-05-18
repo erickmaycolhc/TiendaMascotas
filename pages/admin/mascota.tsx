@@ -7,24 +7,26 @@ import axios from "axios";
 
 interface IMascota {
   id: number;
+  nombre: string;
   name: string;
   description: string;
   stock: string;
   imagen: string;
   precio: number;
   descuento: number;
-  nombre: string;
+  status: string;
 }
 
 const inititalStateMascota: IMascota = {
   id: 0,
+  nombre: "",
   name: "",
   description: "",
   stock: "",
   imagen: "",
   precio: 0,
   descuento: 0,
-  nombre: "",
+  status: "",
 };
 
 export default function Mascota() {
@@ -38,6 +40,44 @@ export default function Mascota() {
         setmascota(response);
       });
   });
+
+  const cargarData = () => {
+    const config: any = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    const urlApi = "http://localhost:3000/api/mascota";
+
+    fetch(urlApi, config)
+      .then((responsesText: any) => {
+        return responsesText.json();
+      })
+      .then((response: any) => {
+        setmascota(response.data);
+      });
+  };
+
+  const handlerDelete = (id: number) => {
+    //cambiando de status a la mascota
+    const config: any = {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    const urlApi = "http://localhost:3000/api/mascota/" + id;
+    fetch(urlApi, config)
+      .then((responseText: any) => {
+        return responseText.json();
+      })
+      .then((response: any) => {
+        console.log("response ==> ", response);
+        //cargarData();
+      });
+  };
+
   return (
     <>
       <AdminLayout>
@@ -67,7 +107,7 @@ export default function Mascota() {
             </div>
 
             <div className="cajita-add">
-              <Link href={"/admin/mascota"}>
+              <Link href={"/admin/mascota/new"}>
                 <div className="butt">Add New</div>
               </Link>
             </div>
@@ -81,6 +121,7 @@ export default function Mascota() {
                   <th>Name</th>
                   <th>Stock</th>
                   <th>Imagen</th>
+                  <th>Status</th>
                   <th>Precio</th>
                   <th>Descuento</th>
                   <th>Raza</th>
@@ -88,17 +129,30 @@ export default function Mascota() {
                 </tr>
                 {mascota.map((element) => {
                   return (
-                    <tr>
+                    <tr key={element.id}>
                       <td>{element.id}</td>
                       <td>{element.name}</td>
                       <td>{element.stock}</td>
                       <td>{element.imagen}</td>
+                      <td>
+                        <a className="active" href="#">
+                          {element.status}
+                        </a>
+                      </td>
                       <td>{element.precio}</td>
                       <td>{element.descuento}</td>
                       <td>{element.nombre}</td>
                       <td>
-                        <button>Editar</button>
-                        <button>Eliminar</button>
+                        <Link href={"/admin/mascota/" + element.id}>
+                          <button type="button">Editar</button>
+                        </Link>
+                        <button
+                          onClick={() => {
+                            handlerDelete(element.id);
+                          }}
+                        >
+                          Eliminar
+                        </button>
                       </td>
                     </tr>
                   );
